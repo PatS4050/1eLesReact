@@ -10,10 +10,12 @@ Table of Contents:
     1. Global Styles
 ////////////////////////*/
 :root {
-    --green: #8000FF;
+    --green: green;
     --blue: blue;
     --red: red;
 }
+
+//Dit werkt blijkbaar niet maar weet niet waarom//
 
 /*////////////////////////
     2. Typography
@@ -24,7 +26,7 @@ Table of Contents:
     3. Areas
 ////////////////////////*/
 .greenText {
-color: green;
+color:green;
 }
 .blueText {
     color: blue;
