@@ -18,12 +18,12 @@ function App() {
     return (
         <>
             <h1>Begin hier met met maken van de applicatie!</h1>
-            <p>Totaal verkochte TV's <span className="greenText">{countSoldProducts(inventory)}</span></p>
-            <p>Totaal ingekochte TV's <span className="blueText">{countBuyProducts(inventory)}</span></p>
-            <p>Totaal nog te verkopen TV's <span className="redText"> {countSellProducts(inventory)}</span></p>
+            <p className="greenText">Totaal verkochte TV's {countSoldProducts(inventory)}</p>
+            <p className="blueText">Totaal ingekochte TV's {countBuyProducts(inventory)}</p>
+            <p className="redText">Totaal nog te verkopen TV's {countSellProducts(inventory)}</p>
             <section>
                 <h2>Type TV</h2>
-                <p>{typeProducts(bestSellingTv)}</p>
+                <p>{typeProducts(bestSellingTv.type)}</p>
                 {/*// Hoe declareer ik hier een object ipv array //*/}
                 <p>{typeProducts(inventory)}</p>
             </section>
