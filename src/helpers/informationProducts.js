@@ -1,8 +1,45 @@
 //.helpers
+import {bestSellingTv} from "../constants/inventory.js";
+
 export function typeProducts(tomato) {
-    let typeProduct = toString()
-    for (let i = 0; i < tomato.length; i++) {
-        typeProduct += tomato[i].type;
-    }
+    const typeProduct = tomato.type
 return typeProduct
 }
+export function brandProducts(tomato) {
+    const brandProduct = tomato.brand
+    return brandProduct
+}
+export function nameProducts(tomato) {
+    const nameProduct = tomato.name
+    return nameProduct
+}
+export function priceProducts(tomato) {
+    const priceProduct = tomato.price
+    return priceProduct
+}
+// export function screenSizesProducts(tomato) {
+//     let screenSizeProduct = 0
+//     for (let i = 0; i < tomato.availableSizes.length; i++) {
+//         screenSizeProduct= tomato.availableSizes[i];
+//     }
+//     return screenSizeProduct
+// }
+
+export function screenSizesProducts(tomato){
+    let screenSizeProduct = []
+    for (let i = 0; i < tomato.availableSizes.length; i++) {
+        let arraySizes = tomato.availableSizes[i] +" inch (";
+        let arraySizesMm = Math.round(tomato.availableSizes[i] * 2.54) +" cm) | ";
+        screenSizeProduct.push(arraySizes + arraySizesMm);
+    }
+    return screenSizeProduct
+
+}
+
+// export function screenSizesProductsMm(tomato) {
+//     let screenSizeProductMm = 0
+//     for (let i = 0; i < tomato.availableSizes.length; i++) {
+//         screenSizeProductMm = tomato.availableSizes[i];
+//     }
+//     return screenSizeProductMm * 25.4
+// }

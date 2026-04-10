@@ -15,7 +15,7 @@ Table of Contents:
     --red: red;
 }
 
-//Dit werkt blijkbaar niet maar weet niet waarom//
+/*//Dit werkt blijkbaar niet maar weet niet waarom//*/
 
 /*////////////////////////
     2. Typography
@@ -26,7 +26,7 @@ Table of Contents:
     3. Areas
 ////////////////////////*/
 .greenText {
-color: lightgreen;
+color: var(--green);
 }
 .blueText {
     color: blue;

@@ -5,7 +5,7 @@ import {inventory, bestSellingTv} from "./constants/inventory.js";
 import {countBuyProducts} from "./helpers/countBuyProducts.js"
 import {countSellProducts} from "./helpers/countSellProducts.js";
 // deze zijn variabelen met export als pre//
-import {typeProducts} from "./helpers/informationProducts.js";
+import {brandProducts, typeProducts, nameProducts, priceProducts, screenSizesProducts} from "./helpers/informationProducts.js";
 
 
 function App() {
@@ -22,10 +22,12 @@ function App() {
             <p className="blueText">Totaal ingekochte TV's {countBuyProducts(inventory)}</p>
             <p className="redText">Totaal nog te verkopen TV's {countSellProducts(inventory)}</p>
             <section>
+
                 <h2>Type TV</h2>
-                <p>{typeProducts(bestSellingTv.type)}</p>
-                {/*// Hoe declareer ik hier een object ipv array //*/}
-                <p>{typeProducts(inventory)}</p>
+                <p>{brandProducts(bestSellingTv)} {typeProducts(bestSellingTv)} - {nameProducts(bestSellingTv)}</p>
+                <p>€{priceProducts(bestSellingTv)},-</p>
+                <p>{screenSizesProducts(bestSellingTv)}</p>
+                {/*<p>{screenSizesProductsMm(bestSellingTv)}</p>*/}
             </section>
         </>
     )
