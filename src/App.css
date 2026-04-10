@@ -9,6 +9,15 @@ Table of Contents:
 /*////////////////////////
     1. Global Styles
 ////////////////////////*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
 :root {
     --green: green;
     --blue: blue;
@@ -25,14 +34,31 @@ Table of Contents:
 /*////////////////////////
     3. Areas
 ////////////////////////*/
+body {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-content: center;
+    flex-base: 900px;
+}
 .greenText {
 color: var(--green);
 }
 .blueText {
-    color: blue;
+    color: var(--blue);
 }
 .redText{
-    color: red;
+    color: var(--red);
+}
+.bestSelling .typeTv {
+    font-weight: strong;
+    font-size: 18px;
+}
+.bestSelling {
+    border: 1px dashed black;
+    background-color: #ececed;
+    padding: 20px;
+
 }
 
 /*////////////////////////
