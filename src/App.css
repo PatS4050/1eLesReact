@@ -52,6 +52,25 @@ color: var(--green);
     color: var(--red);
 }
 
+.saleOverview{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    gap:24px;
+}
+.saleOverview section{
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 240px;
+    height: 320px;
+
+
+}
 .bestSelling img{
     width:240px;
     background-color: #ececed;
@@ -71,6 +90,18 @@ color: var(--green);
     flex-grow: 0;
     flex-shrink: 0;
     width:800px;
+}
+.bestSelling .icon {
+    /*border: 1px solid blueviolet;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+}
+.bestSelling .icon img{
+    width:16px;
+    height: 16px;
 }
 
 /*////////////////////////
