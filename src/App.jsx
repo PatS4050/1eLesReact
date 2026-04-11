@@ -19,18 +19,24 @@ function App() {
 
     return (
         <>
-            <body>
-                <h1>Begin hier met met maken van de applicatie!</h1>
-                <p className="greenText">Totaal verkochte TV's {countSoldProducts(inventory)}</p>
-                <p className="blueText">Totaal ingekochte TV's {countBuyProducts(inventory)}</p>
-                <p className="redText">Totaal nog te verkopen TV's {countSellProducts(inventory)}</p>
+            <div className="body">
+                <div>
+                    <h1>Begin hier met met maken van de applicatie!</h1>
+                    <p className="greenText">Totaal verkochte TV's {countSoldProducts(inventory)}</p>
+                    <p className="blueText">Totaal ingekochte TV's {countBuyProducts(inventory)}</p>
+                    <p className="redText">Totaal nog te verkopen TV's {countSellProducts(inventory)}</p>
+                </div>
                 <section className="bestSelling">
-                    <p className="typeTv">{brandProducts(bestSellingTv)} {typeProducts(bestSellingTv)} - {nameProducts(bestSellingTv)}</p>
-                    <h2>€{priceProducts(bestSellingTv)},-</h2>
-                    <p>{screenSizesProducts(bestSellingTv)}</p>
-                    {/*<p>{screenSizesProductsMm(bestSellingTv)}</p>*/}
+                    <img src="https://w7.pngwing.com/pngs/870/575/png-transparent-samsung-ku6000-led-backlit-lcd-ultra-high-definition-television-4k-resolution-smart-tv-samsung-television-media-led.png"
+                         alt="samsung beeldscherm" className="beeldschermPicture"/>
+                    <div>
+                        <p className="typeTv">{brandProducts(bestSellingTv)} {typeProducts(bestSellingTv)} - {nameProducts(bestSellingTv)}</p>
+                        <h2>€{priceProducts(bestSellingTv)},-</h2>
+                        <p>{screenSizesProducts(bestSellingTv)}</p>
+                        {/*<p>{screenSizesProductsMm(bestSellingTv)}</p>*/}
+                    </div>
                 </section>
-            </body>
+            </div>
         </>
     )
 }

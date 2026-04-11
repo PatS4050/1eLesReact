@@ -24,8 +24,6 @@ ol, ul {
     --red: red;
 }
 
-/*//Dit werkt blijkbaar niet maar weet niet waarom//*/
-
 /*////////////////////////
     2. Typography
 ////////////////////////*/
@@ -34,12 +32,15 @@ ol, ul {
 /*////////////////////////
     3. Areas
 ////////////////////////*/
+
 body {
+    border: 2px solid blue;
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
-    align-content: center;
+    align-items: center;
     flex-base: 900px;
+    gap:12px;
 }
 .greenText {
 color: var(--green);
@@ -50,6 +51,11 @@ color: var(--green);
 .redText{
     color: var(--red);
 }
+
+.bestSelling img{
+    width:240px;
+    background-color: #ececed;
+}
 .bestSelling .typeTv {
     font-weight: strong;
     font-size: 18px;
@@ -58,7 +64,13 @@ color: var(--green);
     border: 1px dashed black;
     background-color: #ececed;
     padding: 20px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width:800px;
 }
 
 /*////////////////////////
