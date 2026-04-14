@@ -14,6 +14,7 @@ import {
 } from "./helpers/informationProducts.js";
 import minus from "./assets/minus.png"
 import check from "./assets/check.png"
+import {showOutcomeInConsole} from "./constants/arrayOefening.js"
 
 // import bestBeeldscherm from "https://w7.pngwing.com/pngs/870/575/png-transparent-samsung-ku6000-led-backlit-lcd-ultra-high-definition-television-4k-resolution-smart-tv-samsung-television-media-led.png"//
 
@@ -26,6 +27,8 @@ function App() {
     function buttonClick(e) {
         console.log(e)
     }
+    showOefeningOneInConsole();
+
     return (
         <>
             <div className="body">
