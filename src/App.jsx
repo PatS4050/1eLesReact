@@ -55,7 +55,7 @@ showOutcomeInConsole()
             <div>
                 <section className="bestSelling">
                     <img
-                        src="https://w7.pngwing.com/pngs/870/575/png-transparent-samsung-ku6000-led-backlit-lcd-ultra-high-definition-television-4k-resolution-smart-tv-samsung-television-media-led.png"
+                        src={bestSellingTv.sourceImg}
                         alt="samsung beeldscherm" className="beeldschermPicture"/>
                     <div>
                         <p className="typeTv">{brandProducts(bestSellingTv)} {typeProducts(bestSellingTv)} - {nameProducts(bestSellingTv)}</p>

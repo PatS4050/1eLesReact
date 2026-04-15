@@ -22,13 +22,33 @@ function showOutcomeInConsole() {
 //     return soldTV.sold;
 // })*
     const soldOutTVs = inventory.filter((stockTV) => {
-        if (stockTV.originalStock - stockTV.sold === 0)
-        {return stockTV;}
+        if (stockTV.originalStock - stockTV.sold === 0) {
+            return stockTV;
+        }
     })
+    console.log(soldOutTVs);
 
-// console.log(inStockTVs)
-// console.log(soldTVs)
-    console.log(soldOutTVs)
+    //opgave 1c
+    const specificTVs = inventory.find((specificTV) => {
+        return specificTV.type === 'NH3216SMART';
+    })
+    console.log("1c", specificTVs);
+
+//opgave 1d
+    const sportTVs = inventory.filter((sportTV) => {
+        if (sportTV.refreshRate >= 99) {
+            return sportTV;
+        }
+    })
+    console.log("1d", sportTVs);
+
+//opgave 1e
+const largeTVs = inventory.filter((largeTV) => {
+    return largeTV.availableSizes.some >= 52
+})
+console.log("1e", largeTVs);
 }
 
+
 export default showOutcomeInConsole;
+
