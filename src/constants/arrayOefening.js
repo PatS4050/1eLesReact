@@ -1,14 +1,13 @@
 import {inventory} from './inventory.js';
 
 function showOutcomeInConsole() {
-
 //opgave 1a
 
-const typeTVs = inventory.map ((typeTV) => {
-    // console.log(inventory.type);
-    return typeTV.type;
-})
-console.log(typeTVs);
+    const typeTVs = inventory.map((typeTV) => {
+        // console.log(inventory.type);
+        return typeTV.type;
+    })
+    console.log(typeTVs);
 
 //opgave 1b
 //een sortering van alle uitverkochte tvs
@@ -21,15 +20,15 @@ console.log(typeTVs);
 // })
 // const soldTVs = inventory.map((soldTV) => {
 //     return soldTV.sold;
-// })
-let soldOutTVs= inventory.map((stockTV)=>{
-    if (stockTV.originalStock - stockTV.sold === 0)
-    {return stockTV}
-})
+// })*
+    const soldOutTVs = inventory.filter((stockTV) => {
+        if (stockTV.originalStock - stockTV.sold === 0)
+        {return stockTV;}
+    })
 
 // console.log(inStockTVs)
 // console.log(soldTVs)
-console.log(soldOutTVs)
+    console.log(soldOutTVs)
 }
 
 export default showOutcomeInConsole;
