@@ -44,9 +44,15 @@ function showOutcomeInConsole() {
 
 //opgave 1e
 const largeTVs = inventory.filter((largeTV) => {
-    return largeTV.availableSizes.some >= 52
+    return largeTV.availableSizes.includes(65)
 })
 console.log("1e", largeTVs);
+
+//opgave 1f
+    const ambiLights = inventory.filter((ambiLight) => {
+        return ambiLight.options.name === "ambiLight" && ambiLight.options.applicable === true;
+    })
+    console.log("1f", ambiLights);
 }
 
 
