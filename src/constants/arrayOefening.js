@@ -49,10 +49,11 @@ const largeTVs = inventory.filter((largeTV) => {
 console.log("1e", largeTVs);
 
 //opgave 1f
-    const ambiLights = inventory.filter((ambiLight) => {
-        return ambiLight.options.name === "ambiLight" && ambiLight.options.applicable === true;
-    })
-    console.log("1f", ambiLights);
+
+//     const ambiLights = inventory.filter((ambiLight) => {
+//         return ambiLight.options.some(name === "ambiLight") && ambiLight.options.some(applicable === true);
+//     })
+//     console.log("1f", ambiLights);
 }
 
 

@@ -71,6 +71,11 @@ showOutcomeInConsole()
                     <button type="button" name="sport geschikt" onClick={() => buttonClick(eSport)}>Meest geschikt voor sport eerst</button>
                 </span>
             </div>
+            <div className="listEmployees">
+                <ul>
+                    <li>lijst {brandProducts(inventory)}</li>
+                </ul>
+            </div>
         </>
     )
 }

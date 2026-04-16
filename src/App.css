@@ -68,9 +68,8 @@ color: var(--green);
     flex-grow: 1;
     flex-basis: 240px;
     height: 320px;
-
-
 }
+/* hoofdstuk Best selling */
 .bestSelling img{
     width:240px;
     background-color: #ececed;
@@ -103,7 +102,10 @@ color: var(--green);
     width:16px;
     height: 16px;
 }
-
+/* hoofdstuk lijsten voor werknemers */
+.listEmployees{
+    border:2px dashed red;
+}
 /*////////////////////////
     2. Media Queries
 ////////////////////////*/
