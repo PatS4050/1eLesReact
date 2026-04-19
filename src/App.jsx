@@ -28,6 +28,7 @@ function App() {
         console.log(e)
     }
 showOutcomeInConsole()
+    // const listBrands = inventory.map ((listBrand) => {return <li>listBrand.brand</li> })
 
     return (
         <>
@@ -73,9 +74,21 @@ showOutcomeInConsole()
             </div>
             <div className="listEmployees">
                 <ul>
-                    <li>lijst {brandProducts(inventory)}</li>
+                    {inventory.map ((brandList) => {return <li>{brandList.brand}</li> })}
                 </ul>
             </div>
+            <section className="bestSelling">
+                <img
+                    src={bestSellingTv.sourceImg}
+                    alt="samsung beeldscherm" className="beeldschermPicture"/>
+                <div>
+                    <p className="typeTv">{brandProducts(bestSellingTv)} {typeProducts(bestSellingTv)} - {nameProducts(bestSellingTv)}</p>
+                    <h2>€{priceProducts(bestSellingTv)},-</h2>
+                    <p>{screenSizesProducts(bestSellingTv)}</p>
+                    <p className="icon"><img src={check}/> wifi <img src={minus}/> speech <img src={check}/> hdr <img src={check}/> bluetooth <img src={minus}/> ambilight </p>
+                    {/*<p>{screenSizesProductsMm(bestSellingTv)}</p>*/}
+                </div>
+            </section>
         </>
     )
 }

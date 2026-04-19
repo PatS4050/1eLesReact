@@ -7,7 +7,8 @@ return typeProduct
 }
 export function brandProducts(tomato) {
     const brandProduct = tomato.brand
-    return brandProduct
+    return brandProduct.map
+    // return brandProduct.map (() => (<li>{tomato}</li>))
 }
 export function nameProducts(tomato) {
     const nameProduct = tomato.name
