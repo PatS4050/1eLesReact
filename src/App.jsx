@@ -73,21 +73,24 @@ showOutcomeInConsole()
                 </span>
             </div>
             <div className="listEmployees">
+                <h2>All brands for selling</h2>
                 <ul>
                     {inventory.map ((brandList) => {return <li>{brandList.brand}</li> })}
                 </ul>
             </div>
             <section className="bestSelling">
+
                 <img
                     src={bestSellingTv.sourceImg}
                     alt="samsung beeldscherm" className="beeldschermPicture"/>
-                <div>
-                    <p className="typeTv">{brandProducts(bestSellingTv)} {typeProducts(bestSellingTv)} - {nameProducts(bestSellingTv)}</p>
-                    <h2>€{priceProducts(bestSellingTv)},-</h2>
-                    <p>{screenSizesProducts(bestSellingTv)}</p>
-                    <p className="icon"><img src={check}/> wifi <img src={minus}/> speech <img src={check}/> hdr <img src={check}/> bluetooth <img src={minus}/> ambilight </p>
-                    {/*<p>{screenSizesProductsMm(bestSellingTv)}</p>*/}
-                </div>
+                {inventory.map ({inventory} => {return
+                    <div>
+                    {/*<p className="typeTv">{brandProducts(inventory)} {typeProducts(inventory)} - {nameProducts(inventory)}</p>*/}
+                    <h2>€{priceProducts(inventory[i])},-</h2>
+                    {/*<p>{screenSizesProducts(inventory)}</p>*/}
+                    {/*<p className="icon"><img src={check}/> wifi <img src={minus}/> speech <img src={check}/> hdr <img src={check}/> bluetooth <img src={minus}/> ambilight </p>*/}
+                    {/*/!*<p>{screenSizesProductsMm(bestSellingTv)}</p>*!/*/}
+                </div>}}
             </section>
         </>
     )
