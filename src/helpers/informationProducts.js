@@ -36,19 +36,18 @@ export function screenSizesProducts(tomato){
     return screenSizeProduct
 }
 
-export function optionsProduct(tomato) {
-    let optionProduct = []
-    for(let i = 0; i < tomato.options.length; i++) {
-        let optionProduct =  tomato.options.name[i]
-        if { tomato.options.applicable = true
-            <img src={check}/>
-        } else {
-            <img src={minus}/>
-        }
-    }
-    return optionsProduct
+// export function optionsProduct(tomato) {
+//     let optionProduct = []
+//     for(let i = 0; i < tomato.options.length; i++) {
+//         let optionProduct =  tomato.options.name[i]
+//         if { tomato.options.applicable = true
+//             <img src={check}/>
+//         } else {
+//             <img src={minus}/>
+//         }
+//     }
+//     return optionsProduct
 
-}
 
 
 

@@ -11,7 +11,6 @@ import {
     nameProducts,
     priceProducts,
     screenSizesProducts,
-    optionsProduct,
 } from "./helpers/informationProducts.js";
 import minus from "./assets/minus.png"
 import check from "./assets/check.png"
@@ -95,8 +94,8 @@ function App() {
                         <h2>€{priceProducts(inventory)},-</h2>
                         <p>{screenSizesProducts(inventory)}</p>
                         <ul className={"icon"}>
-                            {inventory.options.map((inventory) => {
-                                return <li>"xx"</li>
+                            {inventory.options.map((optionsList) => {
+                                return <li>{optionsList.name}</li>
                             })}
                         </ul>
                         {/*<p className="icon"><img src={check}/> wifi <img src={minus}/> speech <img*/}
