@@ -95,6 +95,9 @@ function App() {
                         <p>{screenSizesProducts(inventory)}</p>
                         <ul className={"icon"}>
                             {inventory.options.map((optionsList) => {
+                                // let optionsApplicable
+                                // if {options.applicable = true
+                                //  <img src={check}/> }
                                 return <li>{optionsList.name}</li>
                             })}
                         </ul>
