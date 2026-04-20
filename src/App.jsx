@@ -88,7 +88,6 @@ showOutcomeInConsole()
 
                         <h2>€{priceProducts(inventory)},-</h2>
 
-
                 </div>})}
             </section>
         </>
