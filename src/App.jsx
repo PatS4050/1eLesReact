@@ -27,7 +27,8 @@ function App() {
     function buttonClick(e) {
         console.log(e)
     }
-showOutcomeInConsole()
+
+    showOutcomeInConsole()
     // const listBrands = inventory.map ((listBrand) => {return <li>listBrand.brand</li> })
 
     return (
@@ -62,34 +63,41 @@ showOutcomeInConsole()
                         <p className="typeTv">{brandProducts(bestSellingTv)} {typeProducts(bestSellingTv)} - {nameProducts(bestSellingTv)}</p>
                         <h2>€{priceProducts(bestSellingTv)},-</h2>
                         <p>{screenSizesProducts(bestSellingTv)}</p>
-                        <p className="icon"><img src={check}/> wifi <img src={minus}/> speech <img src={check}/> hdr <img src={check}/> bluetooth <img src={minus}/> ambilight </p>
+                        <p className="icon"><img src={check}/> wifi <img src={minus}/> speech <img
+                            src={check}/> hdr <img src={check}/> bluetooth <img src={minus}/> ambilight </p>
                         {/*<p>{screenSizesProductsMm(bestSellingTv)}</p>*/}
                     </div>
                 </section>
                 <span className="footer">
-                    <button type="button" name="meest verkocht" onClick={() => buttonClick(eMeest)}>Meest verkocht eerst</button>
-                    <button type="button" name="goedkoopste" onClick={() => buttonClick(eGoedkoopst)}>Goedkoopste eerst</button>
+                    <button type="button" name="meest verkocht"
+                            onClick={() => buttonClick(eMeest)}>Meest verkocht eerst</button>
+                    <button type="button" name="goedkoopste"
+                            onClick={() => buttonClick(eGoedkoopst)}>Goedkoopste eerst</button>
                     <button type="button" name="sport geschikt" onClick={() => buttonClick(eSport)}>Meest geschikt voor sport eerst</button>
                 </span>
             </div>
             <div className="listEmployees">
                 <h2>All brands for selling</h2>
                 <ul>
-                    {inventory.map ((brandList) => {return <li>{brandList.brand}</li> })}
+                    {inventory.map((brandList) => {
+                        return <li>{brandList.brand}</li>
+                    })}
                 </ul>
             </div>
-            <section className="bestSelling">
-
-                <img
-                    src={bestSellingTv.sourceImg}
-                    alt="samsung beeldscherm" className="beeldschermPicture"/>
-                {inventory.map ((inventory) => {return
+            {inventory.map((inventory) => {
+                return <section className="bestSelling">
+                    <img
+                        src={bestSellingTv.sourceImg}
+                        alt="samsung beeldscherm" className="beeldschermPicture"/>
                     <div>
-
+                        <p className="typeTv">{brandProducts(inventory)} {typeProducts(inventory)} - {nameProducts(inventory)}</p>
                         <h2>€{priceProducts(inventory)},-</h2>
-
-                </div>})}
-            </section>
+                        <p>{screenSizesProducts(inventory)}</p>
+                        <p className="icon"><img src={check}/> wifi <img src={minus}/> speech <img
+                            src={check}/> hdr <img src={check}/> bluetooth <img src={minus}/> ambilight </p>
+                    </div>
+                </section>
+            })}
         </>
     )
 }
