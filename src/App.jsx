@@ -83,14 +83,15 @@ showOutcomeInConsole()
                 <img
                     src={bestSellingTv.sourceImg}
                     alt="samsung beeldscherm" className="beeldschermPicture"/>
-                {inventory.map ({inventory} => {return
+                {inventory.map ((inventory) => {return
                     <div>
-                    {/*<p className="typeTv">{brandProducts(inventory)} {typeProducts(inventory)} - {nameProducts(inventory)}</p>*/}
-                    <h2>€{priceProducts(inventory[i])},-</h2>
-                    {/*<p>{screenSizesProducts(inventory)}</p>*/}
-                    {/*<p className="icon"><img src={check}/> wifi <img src={minus}/> speech <img src={check}/> hdr <img src={check}/> bluetooth <img src={minus}/> ambilight </p>*/}
-                    {/*/!*<p>{screenSizesProductsMm(bestSellingTv)}</p>*!/*/}
-                </div>}}
+                        {/*<p className="typeTv">{brandProducts(inventory)} {typeProducts(inventory)} - {nameProducts(inventory)}</p>*/}
+                        <h2>€{priceProducts(inventory)},-</h2>
+                        {/*<p>{screenSizesProducts(inventory)}</p>*/}
+                        {/*<p className="icon"><img src={check}/> wifi <img src={minus}/> speech <img src={check}/> hdr <img src={check}/> bluetooth <img src={minus}/> ambilight </p>*/}
+                        {/*/!*<p>{screenSizesProductsMm(bestSellingTv)}</p>*!/*/}
+
+                </div>})}
             </section>
         </>
     )
