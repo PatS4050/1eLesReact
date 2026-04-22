@@ -95,11 +95,12 @@ function App() {
                         <p>{screenSizesProducts(inventory)}</p>
                         <ul className={"icon"}>
                             {inventory.options.map((optionsList) => {
-                                // let optionsApplicable
-                                // if {options.applicable = true
-                                //  <img src={check}/> }
-                                return <li>{optionsList.name}</li>
-                            })}
+                                if (optionsList.applicable === true){
+                                    return <li key={inventory.type + optionsList.options}> <img src={check}/>{optionsList.name}</li>
+                                } else {
+                                    return <li key={inventory.type + optionsList.options}><img src={minus}/>{optionsList.name}</li>
+                                        }
+                                        })}
                         </ul>
                         {/*<p className="icon"><img src={check}/> wifi <img src={minus}/> speech <img*/}
                         {/*    src={check}/> hdr <img src={check}/> bluetooth <img src={minus}/> ambilight </p>*/}
@@ -109,5 +110,9 @@ function App() {
         </>
     )
 }
+// let optionsApplicable
+// if {options.applicable = true
+//  <img src={check}/> }
+// return <li>{optionsList.name}</li>
 
 export default App
