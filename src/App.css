@@ -91,20 +91,20 @@ color: var(--green);
     width:800px;
 }
 .bestSelling .icon {
-    /*border: 1px solid blueviolet;*/
+    border: 1px solid blueviolet;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 6px;
+    gap: 9px;
 }
 .bestSelling .icon img{
-    width:16px;
-    height: 16px;
+    width:11px;
+    height: 11px;
 }
 /* hoofdstuk lijsten voor werknemers */
 .listEmployees{
-    border:2px dashed red;
+    /*border:2px dashed red;*/
 }
 /*////////////////////////
     2. Media Queries

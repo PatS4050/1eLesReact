@@ -18,7 +18,31 @@ import showOutcomeInConsole from "./constants/arrayOefening.js"
 
 // import bestBeeldscherm from "https://w7.pngwing.com/pngs/870/575/png-transparent-samsung-ku6000-led-backlit-lcd-ultra-high-definition-television-4k-resolution-smart-tv-samsung-television-media-led.png"//
 
-const eMeest = " Meest verkochte tv's"
+
+
+// function eMeest  countSoldProducts.sort((a,b) => {
+//     if (a > b) {return 1;}
+//     if (a < b) {return -1;}
+//     return 0;
+// })
+
+// numbers.sort((a, b) => {
+//     // als a groter is dan b, geef een positief getal terug
+//     if (a > b) {
+//         return 1;
+//     }
+//     // als a kleiner is dan b, geef een negatief getal terug
+//     if (a < b) {
+//         return -1;
+//     }
+//
+//     // als bovenstaande condities allebei niet waar zijn,
+//     // zijn de waardes even groot
+//     return 0;
+// })
+// console.log(numbers);
+
+const eMeest = "Meest verkochte eerst"
 const eGoedkoopst = " Goedkoopste eerst"
 const eSport = " Meest geschikt voor sport eerst"
 
@@ -27,9 +51,19 @@ function App() {
     function buttonClick(e) {
         console.log(e)
     }
+    function sortBestSold(bestSold) {
+        bestSold.sort((a, b) => {
+            if (a.sold > b.sold) {return 1;}
+            if (a.sold < b.sold) {return -1;}
+            return 0
+        })
+        console.log(bestSold)
+    }
 
     showOutcomeInConsole()
     // const listBrands = inventory.map ((listBrand) => {return <li>listBrand.brand</li> })
+
+
 
     return (
         <>
@@ -69,8 +103,9 @@ function App() {
                     </div>
                 </section>
                 <span className="footer">
+
                     <button type="button" name="meest verkocht"
-                            onClick={() => buttonClick(eMeest)}>Meest verkocht eerst</button>
+                            onClick={() => sortBestSold(inventory) } >Meest verkocht eerst {sortBestSold(inventory)}</button>
                     <button type="button" name="goedkoopste"
                             onClick={() => buttonClick(eGoedkoopst)}>Goedkoopste eerst</button>
                     <button type="button" name="sport geschikt" onClick={() => buttonClick(eSport)}>Meest geschikt voor sport eerst</button>
@@ -84,21 +119,23 @@ function App() {
                     })}
                 </ul>
             </div>
-            {inventory.map((inventory) => {
+            {inventory.map((inventoryTV) => {
                 return <section className="bestSelling">
                     <img
                         src={bestSellingTv.sourceImg}
                         alt="samsung beeldscherm" className="beeldschermPicture"/>
                     <div>
-                        <p className="typeTv">{brandProducts(inventory)} {typeProducts(inventory)} - {nameProducts(inventory)}</p>
-                        <h2>€{priceProducts(inventory)},-</h2>
-                        <p>{screenSizesProducts(inventory)}</p>
+                        <p className="typeTv">{brandProducts(inventoryTV)} {typeProducts(inventoryTV)} - {nameProducts(inventoryTV)}</p>
+                        <h2>€{priceProducts(inventoryTV)},-</h2>
+                        <p>{screenSizesProducts(inventoryTV)}</p>
                         <ul className={"icon"}>
-                            {inventory.options.map((optionsList) => {
+                            {inventoryTV.options.map((optionsList) => {
                                 if (optionsList.applicable === true){
-                                    return <li key={inventory.type + optionsList.options}> <img src={check}/>{optionsList.name}</li>
+                                    // return <li key={inventoryTV.type + optionsList.options}> <img src={check}/> {optionsList.name}</li>
+                                    return <li> <img src={check}/> {optionsList.name}</li>
                                 } else {
-                                    return <li key={inventory.type + optionsList.options}><img src={minus}/>{optionsList.name}</li>
+                                    // return <li key={inventoryTV.type + optionsList.options}><img src={minus}/> {optionsList.name}</li>
+                                    return <li><img src={minus}/> {optionsList.name}</li>
                                         }
                                         })}
                         </ul>
