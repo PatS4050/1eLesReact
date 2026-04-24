@@ -60,6 +60,24 @@ function App() {
         console.log(bestSold)
     }
 
+    function sortCheapest(cheapestTV) {
+        cheapestTV.sort((a, b) => {
+            if (a.price > b.price) {return 1;}
+            if (a.price < b.price) {return -1;}
+            return 0
+        })
+        console.log(cheapestTV)
+    }
+
+    function sortSports(sportTV) {
+        sportTV.sort((a, b) => {
+            if (a.refreshRate > b.refreshRate) {return -1;}
+            if (a.refreshRate < b.refreshRate) {return 1;}
+            return 0
+        })
+        console.log(sportTV)
+    }
+
     showOutcomeInConsole()
     // const listBrands = inventory.map ((listBrand) => {return <li>listBrand.brand</li> })
 
@@ -107,8 +125,9 @@ function App() {
                     <button type="button" name="meest verkocht"
                             onClick={() => sortBestSold(inventory) } >Meest verkocht eerst</button>
                     <button type="button" name="goedkoopste"
-                            onClick={() => buttonClick(eGoedkoopst)}>Goedkoopste eerst</button>
-                    <button type="button" name="sport geschikt" onClick={() => buttonClick(eSport)}>Meest geschikt voor sport eerst</button>
+                            onClick={() => sortCheapest(inventory)}>Goedkoopste eerst</button>
+                    <button type="button" name="sport geschikt"
+                            onClick={() => sortSports(inventory)}>Meest geschikt voor sport eerst</button>
                 </span>
             </div>
             <div className="listEmployees">
