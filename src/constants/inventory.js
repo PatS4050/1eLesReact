@@ -9,7 +9,9 @@ export const bestSellingTv = {
     screenType: 'LED-LCD',
     screenQuality: 'Ultra HD/4K',
     smartTv: true,
-    sourceImg: 'https://image.coolblue.nl/max/500x500/products/1786196',
+    // sourceImg: 'https://image.coolblue.nl/max/500x500/products/1786196',
+    sourceImg: "https://w7.pngwing.com/pngs/870/575/png-transparent-samsung-ku6000-led-backlit-lcd-ultra-high-definition-television-4k-resolution-smart-tv-samsung-television-media-led.png",
+
     options: [
         {
             name: "wifi",
