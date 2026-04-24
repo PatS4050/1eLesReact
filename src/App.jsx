@@ -53,8 +53,8 @@ function App() {
     }
     function sortBestSold(bestSold) {
         bestSold.sort((a, b) => {
-            if (a.sold > b.sold) {return 1;}
-            if (a.sold < b.sold) {return -1;}
+            if (a.sold > b.sold) {return -1;}
+            if (a.sold < b.sold) {return 1;}
             return 0
         })
         console.log(bestSold)
@@ -105,7 +105,7 @@ function App() {
                 <span className="footer">
 
                     <button type="button" name="meest verkocht"
-                            onClick={() => sortBestSold(inventory) } >Meest verkocht eerst {sortBestSold(inventory)}</button>
+                            onClick={() => sortBestSold(inventory) } >Meest verkocht eerst</button>
                     <button type="button" name="goedkoopste"
                             onClick={() => buttonClick(eGoedkoopst)}>Goedkoopste eerst</button>
                     <button type="button" name="sport geschikt" onClick={() => buttonClick(eSport)}>Meest geschikt voor sport eerst</button>
